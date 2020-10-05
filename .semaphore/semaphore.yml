@@ -43,7 +43,6 @@ blocks:
           - checkout
           - 'cache restore vendor-$SEMAPHORE_GIT_BRANCH-$(checksum go.mod),vendor-$SEMAPHORE_GIT_BRANCH,vendor-master'
           - go mod vendor
-          - source env-sample
       jobs:
         - name: Test
           commands:
@@ -70,7 +69,6 @@ blocks:
           - checkout
           - 'cache restore vendor-$SEMAPHORE_GIT_BRANCH-$(checksum go.mod),vendor-$SEMAPHORE_GIT_BRANCH,vendor-master'
           - go mod vendor
-          - source env-sample
       jobs:
         - name: Build
           commands:
